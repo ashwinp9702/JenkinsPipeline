@@ -15,7 +15,7 @@ pipeline {
                 echo 'Building'
                 git 'https://github.com/ashwinp9702/mavenwar1.git'
                 
-                //bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
               //  bat "mvn -DskipTests"
             }
       
