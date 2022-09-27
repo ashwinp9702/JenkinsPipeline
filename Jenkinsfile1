@@ -13,8 +13,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-                bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                //git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                
+                //bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat "mvn -DskipTests"
             }
             post {
                 // If Maven was able to run the tests, even if some of the test
