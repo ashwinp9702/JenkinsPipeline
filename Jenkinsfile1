@@ -8,10 +8,10 @@ pipeline {
         stage('Hello') {
         when {
         branch 'master'
-         echo 'this is master branch'
+        
         }
             steps {
-                echo 'Hello World Ashwin'
+                echo 'Hello World Ashwin-master'
             }
         }
         stage('Build') {
