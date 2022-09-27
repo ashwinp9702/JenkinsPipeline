@@ -12,6 +12,9 @@ pipeline {
             }
         }
         stage('Build') {
+        when{
+        branch='master'
+        }
             steps {
                 echo 'Building'
                 git 'https://github.com/ashwinp9702/mavenwar1.git'
