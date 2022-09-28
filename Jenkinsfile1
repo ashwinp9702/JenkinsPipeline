@@ -12,12 +12,11 @@ pipeline {
             }
         }
         stage('Build') {
-        when{
-        branch 'master'
-        }
+       
             steps {
                 echo 'Building'
-                git 'https://github.com/ashwinp9702/mavenwar1.git'
+                git branch: 'master', url: 'https://github.com/ashwinp9702/mavenwar1.git'
+              //  git 'https://github.com/ashwinp9702/mavenwar1.git'
                 
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
               //  bat "mvn -DskipTests"
